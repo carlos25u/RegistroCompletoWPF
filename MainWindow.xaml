@@ -1,0 +1,62 @@
+﻿<Window x:Class="RegistroCompletoWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroCompletoWPF"
+        mc:Ignorable="d"
+        Title="Registros de Usuarios" Height="220" Width="600">
+    <Grid>
+
+        <StackPanel Orientation="Vertical" Margin="15">
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="ID"></Label>
+                <TextBox x:Name="IDTextBox" Height="18" Width="110" Margin="32,0,0,0"></TextBox>
+                <Button x:Name="BuscarButton" Margin="5,0" Height="18" Width="20" Click="BuscarButton_Click">
+                    <Image Source="Resources/Buscar.png"></Image></Button>
+                <Label Margin="120,0,0,0" Content="Creacion"></Label>
+                <DatePicker x:Name="CreacionDatePicker" Margin="15,0,0,0" Width="150"></DatePicker>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Nombre"></Label>
+                <TextBox x:Name="NombreTextBox" Height="18" Width="180"></TextBox>
+                <Label Content="Descripcion" Margin="80,0,0,0"></Label>
+                <TextBox x:Name="descripcionTextBox" Height="18" Width="150"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Email"></Label>
+                <TextBox x:Name="EmailTextBox" Height="18" Width="180" Margin="15,0,0,0" ></TextBox>
+                <Label Content="Clave" Margin="80,0,0,0"></Label>
+                <TextBox x:Name="ClaveTextBox" Height="18" Width="150" Margin="34,0,0,0"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button x:Name="NuevoButton" Margin="55,0,0,0" Click="NuevoButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resources/Nuevo.PNG" Height="18" Width="20"></Image>
+                        <Label Content="Nuevo  "></Label>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="GuardarButton" Margin="15,0,0,0" Click="GuardarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resources/Guardar.png" Height="18" Width="20"></Image>
+                        <Label Content="Guardar"></Label>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="EliminarButton" Margin="15,0,0,0" Click="EliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resources/Eliminar.png" Height="18" Width="20"></Image>
+                        <Label Content="Eliminar"></Label>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+
+    </Grid>
+</Window>
